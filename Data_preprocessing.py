@@ -4,7 +4,7 @@ import codecs
 import nltk
 
 def main():
-    filename="C:/Users/Armut Shenoy/Documents/RIT/FIS/GitHub/remaining_data.csv"
+    filename="C:/Users/Amruta Deshpande/Documents/RIT/FIS/GitHub/remaining_data.csv"
     with codecs.open(filename, "r", encoding='utf-8', errors='ignore') as file:
         reader = csv.reader(file)
         for index,row in enumerate(reader):
