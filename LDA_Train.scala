@@ -43,10 +43,11 @@ TermCounter()  ~>
 TermStopListFilter(List("access", "request", "requests", "methods","available","use","example","post","use","example","using","posts","services"))  
   
 
-// Set K=40 based on the perplexity
+// Set K=40 based on the perplexity and define model parameters
 val dataset = LDADataset(text);
 val params = LDAModelParams(numTopics = 40, dataset = dataset);
 
 //Train the Model to fit the document
+//Name of the output model folder to generate
 val modelPath = file("ldatrain-"+dataset.signature+"-"+params.signature);
 TrainCVB0LDA(params, dataset, output=modelPath, maxIterations=200);
